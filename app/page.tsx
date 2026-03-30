@@ -1,11 +1,9 @@
 "use client";
 
-import {
-  FullImageSlide,
-  MapSlide
-} from "@/app/component";
+import { FullImageSlide, MapSlide } from "@/app/component";
 import { useEffect, useRef, useState } from "react";
 import SplashScreen from "./component/SplashScreen";
+import WishForm from "./component/WishForm";
 
 export type SlideType = "Static" | "Custom";
 
@@ -27,7 +25,7 @@ const SLIDE_TEMPLATE: SlideTemplate[] = [
     type: "Custom",
     customRender: <MapSlide />,
   },
-  { type: "Static" },
+  { type: "Custom", customRender: <WishForm /> },
 ];
 
 export default function MainScreen() {
