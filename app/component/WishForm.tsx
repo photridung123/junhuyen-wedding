@@ -55,21 +55,21 @@ export default function WishForm() {
             placeholder="Nhập tên của bạn / Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="sm:w-5/6 sm:mx-8 w-full mb-3 sm:mt-16 mt-10 px-3 rounded-lg border-2 border-dashed border-pink-300 bg-white/80 backdrop-blur focus:outline-none focus:border-pink-500"
+            className="sm:w-5/6 sm:mx-8 w-full mb-3 sm:mt-16 py-1 mt-8 px-3 rounded-lg border-2 border-dashed border-pink-300 bg-white/80 backdrop-blur focus:outline-none focus:border-pink-500"
           />
 
           <textarea
             placeholder="Nhập lời chúc của bạn / Enter your wishes"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            rows={4}
-            className="sm:w-5/6 sm:mx-8 w-full mb-4 px-3 rounded-lg border-2 border-dashed border-pink-300 bg-white/80 backdrop-blur focus:outline-none focus:border-pink-500"
+            rows={3}
+            className="sm:w-5/6 sm:mx-8 w-full mb-4 px-3 rounded-lg py-1 border-2 border-dashed border-pink-300 bg-white/80 backdrop-blur focus:outline-none focus:border-pink-500"
           />
 
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2.5 rounded-lg transition font-medium sm:mt-16 mt-10"
+            className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2.5 rounded-lg transition font-medium sm:mt-16 mt-8"
           >
             {loading ? "Đang gửi..." : "Gửi lời chúc 💖"}
           </button>
